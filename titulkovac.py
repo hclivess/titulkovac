@@ -1,3 +1,6 @@
+#kompilace: python -m nuitka --follow-imports titulkovac.py --standalone --show-progress -j 8 --recurse-all
+
+
 import glob
 import os
 subfolder = "opraveno"
@@ -33,6 +36,8 @@ for file in files_grabbed:
         file_contents = file_contents.replace("", "'")
         file_contents = file_contents.replace("", "'")
         file_contents = file_contents.replace("", "ť")
+        file_contents = file_contents.replace("ò", "ň")
+        file_contents = file_contents.replace("Ò", "Ň")
 
         print(file_contents)
 
