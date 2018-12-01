@@ -17,7 +17,7 @@ print (files_grabbed)
 
 
 for file in files_grabbed:
-    with open (file, "r+", encoding="latin-1") as file_open:
+    with open (file, "r+", encoding="Windows-1250") as file_open:
         file_contents = file_open.read()
 
         file_contents = file_contents.replace("ø","ř")
